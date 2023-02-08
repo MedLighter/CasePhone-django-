@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Inknut Antiqua';
+    src: url('../fonts/InknutAntiqua/InknutAntiqua-Medium.eot');
+    src: local('Inknut Antiqua Medium'), local('InknutAntiqua-Medium'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Medium.woff2') format('woff2'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Medium.woff') format('woff'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inknut Antiqua';
+    src: url('../fonts/InknutAntiqua-Bold.eot');
+    src: local('Inknut Antiqua Bold'), local('InknutAntiqua-Bold'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Bold.woff2') format('woff2'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Bold.woff') format('woff'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inknut Antiqua';
+    src: url('InknutAntiqua-SemiBold.eot');
+    src: local('Inknut Antiqua SemiBold'), local('InknutAntiqua-SemiBold'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-SemiBold.woff2') format('woff2'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-SemiBold.woff') format('woff'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inknut Antiqua';
+    src: url('../fonts/InknutAntiqua-Light.eot');
+    src: local('Inknut Antiqua Light'), local('InknutAntiqua-Light'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Light.woff2') format('woff2'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Light.woff') format('woff'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inknut Antiqua';
+    src: url('../fonts/InknutAntiqua-ExtraBold.eot');
+    src: local('Inknut Antiqua ExtraBold'), local('InknutAntiqua-ExtraBold'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-ExtraBold.woff2') format('woff2'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-ExtraBold.woff') format('woff'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inknut Antiqua';
+    src: url('../fonts/InknutAntiqua-Black.eot');
+    src: local('Inknut Antiqua Black'), local('InknutAntiqua-Black'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Black.woff2') format('woff2'),
+        url('../fonts/InknutAntiqua-Black.woff') format('woff'),
+        url('../fonts/InknutAntiqua-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inknut Antiqua';
+    src: url('../fonts/InknutAntiqua-Regular.eot');
+    src: local('Inknut Antiqua Regular'), local('InknutAntiqua-Regular'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Regular.woff2') format('woff2'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Regular.woff') format('woff'),
+        url('../fonts/InknutAntiqua/InknutAntiqua-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Medium.eot');
+    src: local('Inter Medium'), local('Inter-Medium'),
+        url('../fonts/Inter/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter/Inter-Medium.woff') format('woff'),
+        url('../fonts/Inter/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-LightItalicBETA.eot');
+    src: local('Inter Light Italic BETA'), local('Inter-LightItalicBETA'),
+        url('../fonts/Inter/Inter-LightItalicBETA.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter/Inter-LightItalicBETA.woff2') format('woff2'),
+        url('../fonts/Inter/Inter-LightItalicBETA.woff') format('woff'),
+        url('../fonts/Inter/Inter-LightItalicBETA.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);

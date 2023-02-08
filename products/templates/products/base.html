@@ -1,0 +1,67 @@
+{% load bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+    {% block css %} {% endblock %}
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body>
+      <div class="wrapper">
+        <header>
+            <div class="up_header">
+                <a href="{% url 'index' %}">
+                    <div class="logo">
+                        <p class="logo_txt1">Case</p>
+                            <img class="logo_img" src="{% static 'vendor/image/logo.jpg' %}" width="61" height="70">
+                        <p class="logo_txt2">Phone</p>
+                    </div>
+                </a>
+                <div class="profile">
+                    <a href="{% url 'users:profile' %}">
+                        <img src="{% static 'vendor/image/icon_profile.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="center_header">
+                <div class="line1"></div>
+
+                <a href="#">
+                    <i class="fa fa-bars line_catalog" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <p class="catalog_text">Каталог</p>
+                </a>
+
+                <div class="name_title">
+                    <h4>{{ header }}</h4>
+                </div>
+
+                <a class="basket" href="#">
+                    <img src="{% static '/vendor/image/icon_basket.png' %}" alt="">
+                </a>
+
+                <div class="line2"></div>
+            </div>
+        </header>
+          <div class="main">
+            {% block content %}
+            {% endblock %}
+          </div>
+        <div class="footer">
+            {% block footer %}
+            {% endblock %}
+        </div>
+      </div>
+
+</body>
+</html>

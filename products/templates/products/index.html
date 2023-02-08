@@ -1,0 +1,24 @@
+{% extends 'products/base.html' %}
+{% load bootstrap5 %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static '/vendor/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/fonts.css' %}">
+{% endblock %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <div class="first_buy_content">
+        <a href="{% url 'products:index' %}">
+            <div class="first_buy">
+                <img src="{% static '/vendor/image/first_buy.png' %}" class="first_buy_img">
+                <p class="txt_first_buy">
+                    Начать покупки
+                </p>
+            </div>
+        </a>
+        <div class="img_vector_phone" src="{% static '/vendor/image/vector_phones.png' %}" width="1222px" height="777"></div>
+    </div>
+{% endblock %}

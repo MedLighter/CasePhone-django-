@@ -1,0 +1,443 @@
+
+body, html {
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
+}
+
+.wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex: 1 1 auto;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo_img {
+    position: absolute;
+    left: 929px;
+    top: 16px;
+}
+
+.logo_txt1{
+    position: absolute;
+    width: 64px;
+    height: 25px;
+    left: 862px;
+    top: 38px;
+
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 104.02%;
+}
+
+.logo_txt2{
+    position: absolute;
+    width: 85px;
+    height: 25px;
+    left: 1000px;
+    top: 38px;
+
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 104.02%;
+}
+
+.profile {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 1502px;
+    top: 39px;
+}
+
+.line1{
+    position: absolute;
+    width: 1171px;
+    height: 0px;
+    left: 382px;
+    top: 100px;
+
+    border: 1px solid #000000;
+}
+
+.line2{
+    position: absolute;
+    width: 1171px;
+    height: 0px;
+    left: 382px;
+    top: 147px;
+
+    border: 1px solid #000000;
+}
+
+.line_catalog{
+    position: absolute;
+    left: 400px;
+    top: 110px;
+    font-size: 28px;
+}
+
+.line2_catalog{
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    left: 400px;
+    top: 121px;
+
+    background: #000000;
+    border-radius: 2px;
+}
+
+.line3_catalog{
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    left: 400px;
+    top: 128px;
+
+    background: #000000;
+    border-radius: 2px;
+}
+
+.catalog_text{
+    position: absolute;
+    width: 82px;
+    height: 21px;
+    left: 437px;
+    top: 113px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 104.02%;
+    /* identical to box height, or 21px */
+    letter-spacing: 0.2em;
+    margin: 0px
+
+    color: #000000;
+}
+
+.basket{
+    position: absolute;
+    width: 30px;
+    height: 17.45px;
+    left: 1503px;
+    top: 113px;
+}
+
+.img_vector_phone{
+    position: absolute;
+    width: 1222px;
+    height: 777px;
+    left: 401px;
+    top: 192px;
+    background-image: url(/static/vendor/image/vector_phones.png);
+    z-index: -1;
+}
+
+.first_buy_img{
+    position: absolute;
+    width: 256.48px;
+    height: 146px;
+    left: 1179px;
+    top: 408px;
+
+}
+
+.txt_first_buy{
+    position: absolute;
+    width: 166.42px;
+    height: 91.14px;
+    left: 1220px;
+    top: 430px;
+
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 113.02%;
+    /* or 45px */
+
+
+    color: #000000;
+}
+
+.content{
+	margin-top: 60px;
+    margin-left: 380px;
+}
+.product {
+	background: #fff none repeat scroll 0 0;
+	border: 1px solid #c0c0c0;
+	height: 390px;
+	overflow: hidden;
+	padding: 25px 15px;
+	position: relative;
+	text-align: center;
+	transition: all 0.5s ease 0s;
+	margin-bottom: 20px;
+}
+.product:hover {
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.product-img {
+	height: 200px;
+}
+.product-title a {
+	color: #000;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.product-desc {
+    max-height: 60px;
+    overflow: hidden;
+}
+.product-price {
+	bottom: 15px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	color: #d51e08;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.footer-distributed{
+	background: #444;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+	margin-left: 350px;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Roboto', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #ffdede;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+	margin-right: 350px;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+
+.profile_pg{
+    padding-top: 40px;
+    justify-content: center;
+}
+
+.name_title{
+    text-align: center;
+    margin-top: 107px;
+}
+
