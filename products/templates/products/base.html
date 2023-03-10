@@ -27,7 +27,7 @@
                     </div>
                 </a>
                 <div class="profile">
-                    <a href="{% url 'users:profile' %}">
+                    <a  href="{% if not user.is_anonymous %}{% url 'users:profile' %}{% else %}{% url 'users:registration' %}{% endif %}" >
                         <img src="{% static 'vendor/image/icon_profile.png' %}" alt="">
                     </a>
                 </div>

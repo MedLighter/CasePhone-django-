@@ -5,7 +5,8 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  
+  /* background-image: filter(url(/static/vendor/image/background.png), blur(5px));
+  background-size: 100px; */
 }
 
 .wrapper{

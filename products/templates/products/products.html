@@ -16,11 +16,15 @@
     <div class="container content">
         <div class="row">
             <div class="col-md-2">
-                <div class="list-group">
-                    {% for category in categories %}
-                        <a href="#" class="list-group-item">{{ category }}</a>
-                    {% endfor %}
-                </div>
+<!--                <div class="list-group">-->
+                    <form class="list-group" action="" method="GET">
+                        
+                        {% for category in categories %}
+                        <button type="submit" name="value" class="list-group-item" value="{{ category.id }}">{{ category }}</button>
+                        {% endfor %}
+
+                    </form>
+<!--                </div>-->
             </div>
             <div class="col-md-8 products">
                 <div class="row">
@@ -70,9 +74,10 @@
 			<div class="footer-right">
 				<p>Связь с нами</p>
 				<form action="#" method="post">
+                    {% csrf_token %}
 					<input type="text" name="email" placeholder="Ваша электронная почта">
 					<textarea name="message" placeholder="Сообщение"></textarea>
-					<button>Send</button>
+					<button href="#" type="submit">Send</button>
 				</form>
 			</div>
 		</footer>

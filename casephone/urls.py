@@ -21,7 +21,6 @@ from django.conf import settings
 from products.views import index
 
 urlpatterns = [
-    path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('products', include('products.urls', namespace='products')),

@@ -40,6 +40,7 @@ def registration(request):
 
 
 def profile(request):
+    print(request.user.is_anonymous)
     if request.method == 'POST':
         form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
         if form.is_valid():
@@ -47,6 +48,7 @@ def profile(request):
             return HttpResponseRedirect(reverse('users:profile'))
     else:
         form = UserProfileForm(instance=request.user)
+
     context = {
         'title': 'CP - Профиль',
         'header': 'Профиль',
