@@ -1,0 +1,69 @@
+{% extends 'products/base.html' %}
+{% load bootstrap5 %}
+{% load static %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static '/vendor/css/main.css' %}">
+<link rel="stylesheet" href="{% static '/vendor/css/fonts.css' %}">
+<script src="{% static 'vendor/js/three.min.js' %}"></script>
+<script src="{% static '/vendor/js/main.js' %}" type="module"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script> -->
+{% endblock %}
+
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+
+
+<div id="model"></div>
+
+
+{% endblock %}
+{% block footer %}
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <h3>Case<span>Phone</span></h3>
+        <p class="footer-links">
+            ·
+            <a href="#">Главная</a>
+            ·
+            <a href="#">О нас</a>
+            ·
+            <a href="#">Контакты</a>
+            ·
+        </p>
+        <p class="footer-company-name">MedLighter & clown | 2023</p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p>Связь с нами</p>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <input type="text" name="email" placeholder="Ваша электронная почта">
+            <textarea name="message" placeholder="Сообщение"></textarea>
+            <button href="#" type="submit">Send</button>
+        </form>
+    </div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    var renderer = new THREE.WebGLRenderer();
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    var modelLoader = new THREE.GLTFLoader();
+    modelLoader.load("../3d-models/eye/scene.gltf", function (model) {
+        scene.add(model.scene);
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById("model").appendChild(renderer.domElement);
+</script>
+{% endblock %}

@@ -69,6 +69,8 @@ TEMPLATES = [
     },
 ]
 
+LOGOUT_REDIRECT_URL = 'index'
+
 WSGI_APPLICATION = 'casephone.wsgi.application'
 
 # Database
@@ -120,9 +122,9 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 
-STATICFILES_DIRS = (
-    BASE_DIR / 'static',
-)
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 MEDIA_URL = '/media/'
 
@@ -136,3 +138,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Users
 
 AUTH_USER_MODEL = 'users.User'
+

@@ -34,3 +34,6 @@ class basket(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.PROTECT)
     products = models.ForeignKey(to=Product, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return f'Пользователь: {self.user} | {self.products}'
+

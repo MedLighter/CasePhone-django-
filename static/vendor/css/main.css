@@ -5,18 +5,19 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  /* background-image: filter(url(/static/vendor/image/background.png), blur(5px));
-  background-size: 100px; */
 }
 
 .wrapper{
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: table;
+	height: 100%;
+	width: 100%;
 }
 
 .main{
-    flex: 1 1 auto;
+    /* flex: 1 1 auto; */
+	display: table-row;
+	height: 100%;
 }
 
 a:active, /* активная/посещенная ссылка */
@@ -62,10 +63,17 @@ a {
 
 .profile {
     position: absolute;
-    width: 30px;
+    display: flex;
+    width: 83px;
     height: 30px;
-    left: 1502px;
+    left: 1448px;
     top: 39px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon_profile{
+	top: -10px;
 }
 
 .line1{
@@ -131,7 +139,7 @@ a {
     line-height: 104.02%;
     /* identical to box height, or 21px */
     letter-spacing: 0.2em;
-    margin: 0px
+    margin: 0px;
 
     color: #000000;
 }
@@ -142,6 +150,10 @@ a {
     height: 17.45px;
     left: 1503px;
     top: 113px;
+}
+
+.icon_admin{
+	font-size: 36px;
 }
 
 .img_vector_phone{
@@ -212,13 +224,18 @@ a {
     overflow: hidden;
 }
 .product-price {
-	bottom: 15px;
 	left: 0;
 	position: absolute;
 	width: 100%;
 	color: #d51e08;
 	font-size: 18px;
 	font-weight: 500;
+}
+
+.product-button-basket{
+	margin-top: 17%;
+	width: 100%;
+	height: 9%;
 }
 
 .footer-distributed{
@@ -230,6 +247,7 @@ a {
 	text-align: left;
 	padding: 50px 60px 40px;
 	overflow: hidden;
+	/* flex: 0 0 auto; */
 }
 
 section {

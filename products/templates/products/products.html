@@ -4,8 +4,8 @@
 
 
 {% block css %}
-    <link rel="stylesheet" href="{% static '/vendor/css/main.css' %}">
-    <link rel="stylesheet" href="{% static '/vendor/css/fonts.css' %}">
+<link rel="stylesheet" href="{% static '/vendor/css/main.css' %}">
+<link rel="stylesheet" href="{% static '/vendor/css/fonts.css' %}">
 {% endblock %}
 
 
@@ -13,73 +13,74 @@
 
 {% block content %}
 
-    <div class="container content">
-        <div class="row">
-            <div class="col-md-2">
-<!--                <div class="list-group">-->
-                    <form class="list-group" action="" method="GET">
-                        
-                        {% for category in categories %}
-                        <button type="submit" name="value" class="list-group-item" value="{{ category.id }}">{{ category }}</button>
-                        {% endfor %}
+<div class="container content">
+    <div class="row">
+        <div class="col-md-2">
+            <!--                <div class="list-group">-->
+            <form class="list-group" action="{% url 'products:index' %}" method="GET">
 
-                    </form>
-<!--                </div>-->
-            </div>
-            <div class="col-md-8 products">
+                {% for category in categories %}
+                <button type="submit" name="value" class="list-group-item" value="{{ category.id }}">{{ category }}</button>
+                {% endfor %}
+
+            </form>
+            <a href="{% url 'products:index' %}" class="list-group"><button name="value" class="list-group-item"
+                    value="0" style="margin-top: 20px">Сбросить фильтр</button></a>
+            <!--                </div>-->
+        </div>
+        <div class="col-md-8 products">
+            <!-- <form action="{% url 'products:index' %}" method="GET"> -->
                 <div class="row">
-
                     {% for product in products %}
-
-                        <div class="col-sm-4">
-                            <div class="product">
-                                <div class="product-img">
-                                    <a href="#"><img src="{{ product.image.url }}" width="200px" height="200px" alt=""></a>
-                                </div>
-                                <p class="product-title">
-                                    <a href="#">{{ product.name }}</a>
-                                </p>
-                                <p class="product-desc">{{ product.description }}</p>
-                                <p class="product-price">Цена: {{ product.price }}₽</p>
+                    <div class="col-sm-4">
+                        <div class="product">
+                            <div class="product-img">
+                                <a href=""><img src="{{ product.image.url }}" width="200px" height="200px" alt=""></a>
                             </div>
+                            <p class="product-title">
+                                <a href="#">{{ product.name }}</a>
+                            </p>
+                            <p class="product-desc">{{ product.description }}</p>
+                            <p class="product-price">Цена: {{ product.price }}₽</p>
+                            <a href="{% url 'products:add_product_in_basket' product.id %}"><button class="product-button-basket">Добавить в корзину</button></a>
+                            <!-- <button type="submit" name="basket" value="{{ product.id }}" class="product-button-basket">Добавить в корзину</button> -->
                         </div>
-
+                    </div>
                     {% endfor %}
-
                 </div>
-            </div>
+            <!-- </form> -->
         </div>
     </div>
+</div>
 {% endblock %}
 {% block footer %}
-    <footer class="footer-distributed">
-			<div class="footer-left">
-				<h3>Case<span>Phone</span></h3>
-				<p class="footer-links">
-					·
-					<a href="#">Главная</a>
-					·
-					<a href="#">О нас</a>
-					·
-					<a href="#">Контакты</a>
-					·
-				</p>
-				<p class="footer-company-name">MedLighter & clown | 2023</p>
-				<div class="footer-icons">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
-				</div>
-			</div>
-			<div class="footer-right">
-				<p>Связь с нами</p>
-				<form action="#" method="post">
-                    {% csrf_token %}
-					<input type="text" name="email" placeholder="Ваша электронная почта">
-					<textarea name="message" placeholder="Сообщение"></textarea>
-					<button href="#" type="submit">Send</button>
-				</form>
-			</div>
-		</footer>
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <h3>Case<span>Phone</span></h3>
+        <p class="footer-links">
+            ·
+            <a href="#">Главная</a>
+            ·
+            <a href="#">О нас</a>
+            ·
+            <a href="#">Контакты</a>
+            ·
+        </p>
+        <p class="footer-company-name">MedLighter & clown | 2023</p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p>Связь с нами</p>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <input type="text" name="email" placeholder="Ваша электронная почта">
+            <textarea name="message" placeholder="Сообщение"></textarea>
+            <button href="#" type="submit">Send</button>
+        </form>
+    </div>
+</footer>
 {% endblock %}
-
